@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta
+      name="format-detection"
+      content="telephone=no,address=no,email=no,date=no,url=no"
+    />
+    <title><%=title %></title>
+
+    <style>
+      @font-face {
+        font-family: 'system';
+        font-style: normal;
+        font-weight: 300;
+        src: local('.SFNSText-Light'),
+          local('.HelveticaNeueDeskInterface-Light'), local('.LucidaGrandeUI'),
+          local('Segoe UI Light'), local('Ubuntu Light'), local('Roboto-Light'),
+          local('DroidSans'), local('Tahoma');
+      }
+
+      @font-face {
+        font-family: 'system';
+        font-style: italic;
+        font-weight: 300;
+        src: local('.SFNSText-LightItalic'),
+          local('.HelveticaNeueDeskInterface-Italic'), local('.LucidaGrandeUI'),
+          local('Segoe UI Light Italic'), local('Ubuntu Light Italic'),
+          local('Roboto-LightItalic'), local('DroidSans'), local('Tahoma');
+      }
+
+      @font-face {
+        font-family: 'system';
+        font-style: normal;
+        font-weight: 400;
+        src: local('.SFNSText-Regular'),
+          local('.HelveticaNeueDeskInterface-Regular'), local('.LucidaGrandeUI'),
+          local('Segoe UI'), local('Ubuntu'), local('Roboto-Regular'),
+          local('DroidSans'), local('Tahoma');
+      }
+
+      @font-face {
+        font-family: 'system';
+        font-style: italic;
+        font-weight: 400;
+        src: local('.SFNSText-Italic'),
+          local('.HelveticaNeueDeskInterface-Italic'), local('.LucidaGrandeUI'),
+          local('Segoe UI Italic'), local('Ubuntu Italic'),
+          local('Roboto-Italic'), local('DroidSans'), local('Tahoma');
+      }
+
+      @font-face {
+        font-family: 'system';
+        font-style: normal;
+        font-weight: 500;
+        src: local('.SFNSText-Medium'),
+          local('.HelveticaNeueDeskInterface-MediumP4'),
+          local('.LucidaGrandeUI'), local('Segoe UI Semibold'),
+          local('Ubuntu Medium'), local('Roboto-Medium'),
+          local('DroidSans-Bold'), local('Tahoma Bold');
+      }
+
+      @font-face {
+        font-family: 'system';
+        font-style: italic;
+        font-weight: 500;
+        src: local('.SFNSText-MediumItalic'),
+          local('.HelveticaNeueDeskInterface-MediumItalicP4'),
+          local('.LucidaGrandeUI'), local('Segoe UI Semibold Italic'),
+          local('Ubuntu Medium Italic'), local('Roboto-MediumItalic'),
+          local('DroidSans-Bold'), local('Tahoma Bold');
+      }
+
+      @font-face {
+        font-family: 'system';
+        font-style: normal;
+        font-weight: 700;
+        src: local('.SFNSText-Bold'), local('.HelveticaNeueDeskInterface-Bold'),
+          local('.LucidaGrandeUI'), local('Segoe UI Bold'), local('Ubuntu Bold'),
+          local('Roboto-Bold'), local('DroidSans-Bold'), local('Tahoma Bold');
+      }
+
+      @font-face {
+        font-family: 'system';
+        font-style: italic;
+        font-weight: 700;
+        src: local('.SFNSText-BoldItalic'),
+          local('.HelveticaNeueDeskInterface-BoldItalic'),
+          local('.LucidaGrandeUI'), local('Segoe UI Bold Italic'),
+          local('Ubuntu Bold Italic'), local('Roboto-BoldItalic'),
+          local('DroidSans-Bold'), local('Tahoma Bold');
+      }
+
+      html,
+      body {
+        margin: 0 auto !important;
+        padding: 0 !important;
+        height: 100% !important;
+        width: 100% !important;
+      }
+
+      /* What it does: Stops email clients resizing small text. */
+      * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      /* What it does: Centers email on Android 4.4 */
+      div[style*='margin: 16px 0'] {
+        margin: 0 !important;
+      }
+
+      /* What it does: forces Samsung Android mail clients to use the entire viewport */
+      #MessageViewBody,
+      #MessageWebViewDiv {
+        width: 100% !important;
+      }
+
+      /* What it does: Stops Outlook from adding extra spacing to tables. */
+      table,
+      td {
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
+      }
+
+      /* What it does: Fixes webkit padding issue. */
+      table {
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+        table-layout: fixed !important;
+        margin: 0 auto !important;
+      }
+
+      /* What it does: Uses a better rendering method when resizing images in IE. */
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+      a {
+        text-decoration: none;
+      }
+
+      /* What it does: A work-around for email clients meddling in triggered links. */
+      a[x-apple-data-detectors],  /* iOS */
+        .unstyle-auto-detected-links a,
+        .aBn {
+        border-bottom: 0 !important;
+        cursor: default !important;
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+      .a6S {
+        display: none !important;
+        opacity: 0.01 !important;
+      }
+
+      /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+      .im {
+        color: inherit !important;
+      }
+
+      /* If the above doesn't work, add a .g-img class to any image in question. */
+      img.g-img + div {
+        display: none !important;
+      }
+
+      /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+      /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+      /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+      @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+        u ~ div .email-container {
+          min-width: 320px !important;
+        }
+      }
+      /* iPhone 6, 6S, 7, 8, and X */
+      @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+        u ~ div .email-container {
+          min-width: 375px !important;
+        }
+      }
+      /* iPhone 6+, 7+, and 8+ */
+      @media only screen and (min-device-width: 414px) {
+        u ~ div .email-container {
+          min-width: 414px !important;
+        }
+      }
+    </style>
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG />
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
+
+    <!-- CSS Reset : END -->
+  </head>
+  <body
+    width="100%"
+    style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #F4F7FB;"
+  >
+    <center style="width: 100%; background-color: #F4F7FB;">
+      <!--[if mso | IE]>
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F4F7FB;">
+        <tr>
+        <td>
+      <![endif]-->
+      <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+        <!--[if mso]>
+          <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600">
+          <tr>
+          <td>
+        <![endif]-->
+
+        <!-- Email Body : BEGIN -->
+        <table
+          align="center"
+          role="presentation"
+          cellspacing="0"
+          cellpadding="0"
+          border="0"
+          width="100%"
+          style="margin: auto;"
+        >
+          <!-- Email Header : BEGIN -->
+          <tr>
+            <td style="padding: 20px 0; text-align: center">
+              <!-- LOGO -->
+              <img
+                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0OTQuNCAzNDgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ5NC40IDM0OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGlkPSJPcmJpdCIgZGlzcGxheT0ibm9uZSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjcwMDVGIiBzdHJva2Utd2lkdGg9IjEzIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGQ9Ik0yMTEuNCw4MQoJYzEyOS4yLTQ3LDI0OS45LTQxLjUsMjY5LjUsMTIuMyIvPgo8cGF0aCBpZD0iT3JiaXRfMV8iIGRpc3BsYXk9Im5vbmUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI3MDA1RiIgc3Ryb2tlLXdpZHRoPSIxMyIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJNMTIuOSwyNjMuNwoJQy02LjcsMjA5LjgsODIuNCwxMjgsMjExLjQsODEiLz4KPGc+CgkKCQk8bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzFfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjMzNC40NDYxIiB5MT0iMjMuMjkwOSIgeDI9IjE2MS4zODQ2IiB5Mj0iMzIzLjA0MjMiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAzNDgpIj4KCQk8c3RvcCAgb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojMjkwRTdCIi8+CgkJPHN0b3AgIG9mZnNldD0iMC40MjgxIiBzdHlsZT0ic3RvcC1jb2xvcjojMzIxNDdCIi8+CgkJPHN0b3AgIG9mZnNldD0iMC45OTQ0IiBzdHlsZT0ic3RvcC1jb2xvcjojNDYxRjdCIi8+Cgk8L2xpbmVhckdyYWRpZW50PgoJPHBhdGggZmlsbD0idXJsKCNTVkdJRF8xXykiIGQ9Ik00MjEuNCwxNzRjMCw0LjYtMC4yLDkuMi0wLjUsMTMuN2MtMC40LDUuMS0xLDEwLjEtMS44LDE1Yy0xLjksMTEuMy00LjgsMjIuMi04LjgsMzIuNwoJCUMzODUuNCwzMDEuMiwzMjEuOSwzNDgsMjQ3LjQsMzQ4Yy0zMS40LDAtNjAuOC04LjMtODYuMy0yMi45Yy04LjktNS4xLTE3LjMtMTAuOS0yNS4xLTE3LjVjLTMuNC0yLjgtNi43LTUuOC05LjktOC45CgkJQzkzLjYsMjY3LjIsNzMuNCwyMjMsNzMuNCwxNzRjMC02LjYsMC40LTEzLjEsMS4xLTE5LjVjMC4yLTEuOSwwLjUtMy44LDAuNy01LjZjMC43LTQuOCwxLjYtOS42LDIuNy0xNC4zCgkJYzYuMy0yNywxOC44LTUxLjcsMzYuMS03Mi4yYzYuMS03LjMsMTYtMTAsMjUuMS03LjNjMi42LDAuOCw1LjQsMS4xLDguMywwLjljMTItMC43LDIxLjktMTAuNCwyMi45LTIyLjRjMC0wLjQsMC4xLTAuOCwwLjEtMS4zCgkJYzAuMy05LjQsNi40LTE3LjYsMTUuMi0yMUMyMDQuOCw0LDIyNS42LDAsMjQ3LjQsMGM0MCwwLDc2LjgsMTMuNSwxMDYuMiwzNi4xYzUsMy45LDkuOCw4LDE0LjQsMTIuNGMwLjIsMC4yLDAuNCwwLjMsMC41LDAuNQoJCUM0MDEuMiw4MC43LDQyMS40LDEyNSw0MjEuNCwxNzR6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMzI3LjMsMTkzLjVjLTcuNC04LjUtMTcuMy0xNS4zLTI5LjgtMjAuMmMtMTIuNC00LjktMjguNy05LjYtNDguNy0xNC4yYy0xOS4yLTQuNS0zMy4xLTkuNi00MS43LTE1LjIKCQljLTguNy01LjYtMTMtMTMuOS0xMy0yNC44YzAtMTIuOCw1LTIyLjcsMTQuOS0yOS45czIzLjUtMTAuOCw0MC45LTEwLjhjMTMuMiwwLDI1LjcsMi4yLDM3LjUsNi43YzguMywzLjEsMTYuNCw3LjQsMjQuNCwxMi45CgkJYzUuNCwzLjcsMTIuNywxLjcsMTUuNS00LjJsMy41LTcuM2MyLjEtNC40LDAuOC05LjctMy0xMi44Yy04LjUtNi45LTE4LjYtMTIuMy0zMC41LTE2LjRjLTAuMi0wLjEtMC40LTAuMS0wLjYtMC4yCgkJYy00LjMtMS41LTguNi0yLjctMTMtMy43Yy01LjQtMS4zLTEwLjktMi4yLTE2LjUtMi44Yy01LjctMC42LTExLjYtMS0xNy41LTFjLTE4LDAtMzMuOSwzLTQ3LjUsOS4xYy0xMy4yLDUuOC0yMy41LDEzLjgtMzAuOCwyNAoJCWMtMC4zLDAuNC0wLjYsMC44LTAuOCwxLjFjLTEuNywyLjUtMy4yLDUtNC41LDcuN2MtMS42LDMuMi0yLjksNi42LTMuOSwxMC4xYy0xLjgsNi4xLTIuNiwxMi42LTIuNiwxOS41CgkJYzAsMTMuOSwzLjUsMjUuNCwxMC40LDM0LjRjNyw5LDE2LjYsMTYuMSwyOC45LDIxLjRjMTIuMyw1LjIsMjguMSw5LjksNDcuMiwxNGMyMC4xLDQuNiwzNC43LDkuNCw0My44LDE0LjVzMTMuNywxMi45LDEzLjcsMjMuNAoJCWMwLDEyLjMtNC45LDIxLjgtMTQuNywyOC42Yy05LjgsNi43LTIzLjcsMTAuMS00MS43LDEwLjFjLTE1LjcsMC0yOS45LTIuMS00Mi42LTYuM2MtOS4yLTMuMS0xOC4xLTcuNS0yNi45LTEzLjQKCQljLTUuMy0zLjYtMTIuNi0xLjctMTUuNCw0LjFsLTMuOSw3LjFjLTIuMiw0LjUtMC45LDEwLjEsMy4xLDEzYzkuNyw3LjEsMjAuOCwxMi43LDMzLjQsMTYuOGMxLjUsMC41LDMsMC45LDQuNSwxLjMKCQljNywyLDE0LjQsMy41LDIyLDQuNmM4LDEuMSwxNi4zLDEuNiwyNSwxLjZjMTguOSwwLDM1LjMtMi44LDQ5LjEtOC41czI0LjQtMTMuOCwzMS44LTI0LjNjMS45LTIuNiwzLjUtNS40LDQuOS04LjIKCQljMi4xLTQuMiwzLjYtOC43LDQuNy0xMy41YzEtNC43LDEuNi05LjcsMS42LTE0LjlDMzM4LjQsMjEzLjEsMzM0LjcsMjAyLDMyNy4zLDE5My41eiIvPgo8L2c+CjxnIGlkPSJPcmJpdF8yXyIgZGlzcGxheT0ibm9uZSI+Cgk8cGF0aCBkaXNwbGF5PSJpbmxpbmUiIGZpbGw9IiMyNzAwNUYiIGQ9Ik00ODcsOTEuMWMyLjYsNi40LDMuOSwxMy40LDMuOCwyMC4zYzAsMy40LTAuMyw2LjgtMC45LDEwLjJjLTAuNiwzLjMtMS4zLDYuNi0yLjMsOS44CgkJYy0yLDYuMy00LjYsMTIuNC03LjcsMTguMWMtMy4xLDUuNy02LjUsMTEuMS0xMC4yLDE2LjNjLTcuNSwxMC4zLTE2LDE5LjYtMjUsMjguM2MtOSw4LjYtMTguNiwxNi42LTI4LjQsMjQuMQoJCWMtMzkuNiwyOS44LTg0LDUxLjktMTMwLDY4LjhjLTExLjUsNC4yLTIzLjIsOC0zNSwxMS41Yy01LjksMS43LTExLjgsMy40LTE3LjcsNC45Yy02LDEuNS0xMS45LDIuOS0xNy45LDQuMwoJCWMtMTIsMi42LTI0LjEsNC44LTM2LjMsNi42Yy02LjEsMC45LTEyLjIsMS42LTE4LjQsMi4yYy02LjEsMC42LTEyLjMsMS0xOC41LDEuM2MtMTIuNCwwLjYtMjQuOCwwLjctMzcuMi0wLjMKCQljLTEyLjQtMC45LTI0LjktMi42LTM3LjItNS43Yy02LjItMS41LTEyLjMtMy41LTE4LjMtNS45cy0xMS45LTUuMy0xNy41LTguOWMtNS41LTMuNi0xMC44LTcuOS0xNS4zLTEzLjIKCQljLTQuNS01LjItOC0xMS40LTEwLjEtMTcuOWwxMi4yLTQuNGM0LDkuNSwxMS45LDE2LjksMjEuMywyMi4yYzkuNSw1LjIsMjAuMyw4LjcsMzEuNSwxMC44YzExLjIsMi4yLDIyLjcsMy4zLDM0LjMsMy42CgkJYzExLjYsMC4zLDIzLjMtMC4xLDM1LTFzMjMuMy0yLjUsMzQuOS00LjRjMTEuNi0xLjksMjMuMi00LjIsMzQuNi03YzUuNy0xLjQsMTEuNC0yLjgsMTcuMS00LjRjNS43LTEuNSwxMS40LTMuMSwxNy00LjgKCQljMTEuMy0zLjQsMjIuNS03LjIsMzMuNi0xMS4zYzExLjEtNC4xLDIyLjEtOC41LDMyLjktMTMuMnMyMS41LTkuNywzMi0xNXMyMC45LTEwLjksMzEtMTYuOXMyMC0xMi40LDI5LjUtMTkuMQoJCWM5LjYtNi44LDE4LjgtMTMuOSwyNy40LTIxLjdjOC43LTcuNywxNi45LTE1LjksMjQtMjQuN2M3LjItOC44LDEzLjMtMTguMywxNy4zLTI4LjRjMy45LTEwLjEsNS4yLTIwLjcsMi4yLTMwLjZMNDg3LDkxLjF6Ii8+CjwvZz4KPHBhdGggZmlsbD0iIzI3MDA1RiIgZD0iTTQ5NC4zLDExMC45Yy0wLjEtMy43LTAuNC03LjQtMS4yLTExLjFjLTAuNy0zLjctMS44LTcuMy0zLjEtMTAuOGMtMS40LTMuNS0zLTYuOC00LjktMTBzLTQuMS02LjEtNi41LTguOQoJYy0yLjMtMi44LTUtNS4zLTcuNi03LjZjLTIuNy0yLjMtNS41LTQuNC04LjQtNi4zYy01LjgtMy44LTExLjktNi44LTE4LTkuM2MtNi4yLTIuNS0xMi40LTQuNC0xOC43LTZjLTEyLjYtMy4xLTI1LjMtNC42LTM3LjktNS4yCgljLTExLjUtMC42LTIzLTAuMy0zNC40LDAuNGM1LDMuOSw5LjgsOCwxNC40LDEyLjRjNi4yLDAuNCwxMi41LDEuMSwxOC42LDEuOWMxMS44LDEuNywyMy4zLDQuMiwzNC4zLDcuOGMxMC45LDMuNywyMS4zLDguNSwyOS44LDE1CgljOC41LDYuNCwxNC45LDE0LjUsMTcuOCwyMy41YzMsOS4xLDIuNSwxOS0wLjYsMjguOWMtMS41LDQuOS0zLjcsOS44LTYuMiwxNC42Yy0yLjYsNC44LTUuNiw5LjQtOC45LDEzLjkKCWMtNi42LDktMTQuNCwxNy41LTIyLjgsMjUuM2MtMi45LDIuOC02LDUuNS05LDguMWMtNS43LDQuOS0xMS43LDkuNi0xNy44LDE0LjFjLTkuNCw3LTE5LjIsMTMuNC0yOS4zLDE5LjUKCWMtMTAsNi4xLTIwLjQsMTEuOS0zMC45LDE3LjNjLTIsMS00LDIuMS02LjEsMy4xYy0xOS4xLDkuNi0zOC44LDE4LjEtNTksMjUuNmMtMTEuMSw0LjItMjIuNCw4LTMzLjgsMTEuNHMtMjIuOCw2LjUtMzQuNCw5LjIKCWMtMy40LDAuOC02LjksMS42LTEwLjQsMi4zYy0xOS43LDQuMS0zOS43LDctNTkuNiw4LjJjLTQuNSwwLjMtOS4xLDAuNC0xMy42LDAuNWMtNy4yLDAuMS0xNC4zLDAtMjEuNC0wLjQKCWMtMTEuNi0wLjctMjMuMS0yLjItMzQuMS01cy0yMS41LTYuNy0zMC41LTEyLjVzLTE2LjItMTMuNC0yMC0yMi44Yy0xLjktNC43LTMtOS43LTMuMi0xNC45Yy0wLjItNS4yLDAuNC0xMC42LDEuNi0xNgoJYzAuNi0yLjcsMS41LTUuMywyLjQtOGMxLTIuNywyLTUuMywzLjItNy45YzIuMy01LjIsNS4yLTEwLjMsOC40LTE1LjJjNi4zLTkuOSwxMy44LTE5LjIsMjIuMS0yNy44YzYuNS02LjgsMTMuMy0xMy4zLDIwLjUtMTkuNAoJYzAuNy00LjgsMS42LTkuNiwyLjctMTQuM2MtMC44LDAuNi0xLjcsMS4yLTIuNSwxLjhjLTEwLDcuNC0xOS42LDE1LjMtMjguNywyMy45Yy05LjEsOC42LTE3LjcsMTcuOS0yNS4yLDI4LjIKCWMtMy43LDUuMi03LjMsMTAuNi0xMC40LDE2LjNjLTIuOSw1LjgtNS42LDExLjktNy42LDE4LjNTMC4xLDIzNi4yLDAsMjQzLjJjLTAuMSwzLjUsMC4xLDcsMC42LDEwLjZjMC41LDMuNSwxLjMsNywyLjQsMTAuNQoJYzEuMSwzLjQsMi42LDYuNyw0LjMsOS45YzEuNywzLjIsMy43LDYuMiw1LjksOWM0LjQsNS43LDkuNiwxMC41LDE1LjEsMTQuNmMyLjgsMi4xLDUuNiwzLjksOC42LDUuN2MyLjksMS43LDUuOSwzLjMsOC45LDQuOAoJYzYsMi45LDEyLjIsNS4zLDE4LjUsNy4zYzEyLjUsNCwyNS4zLDYuNSwzOC4xLDhzMjUuNiwyLjIsMzguMywyLjFjNi45LTAuMSwxMy43LTAuMywyMC41LTAuN2M1LjktMC40LDExLjctMC44LDE3LjUtMS41CgljMTIuNi0xLjMsMjUuMS0zLjIsMzcuNS01LjZzMjQuNy01LjIsMzYuOC04LjVjMTIuMS0zLjMsMjQuMi03LjEsMzYuMS0xMS4yYzIzLjgtOC4zLDQ3LTE4LjMsNjkuMy0zMC4yYzExLjItNiwyMi4xLTEyLjQsMzIuNy0xOS40CgljNi41LTQuMiwxMi45LTguNywxOS4xLTEzLjRjNC0yLjksNy45LTYsMTEuOC05LjFjOS45LTguMSwxOS40LTE2LjcsMjguNC0yNi4xYzguOS05LjQsMTcuMy0xOS41LDI0LjUtMzAuNwoJYzMuNi01LjYsNy0xMS40LDkuOC0xNy42YzEuNS0zLjEsMi44LTYuMyw0LTkuNWMxLjItMy4zLDIuMi02LjYsMy4xLTEwQzQ5My41LDEyNS41LDQ5NC41LDExOC4zLDQ5NC4zLDExMC45eiIvPgo8cmFkaWFsR3JhZGllbnQgaWQ9IlNWR0lEXzJfIiBjeD0iMzMuMjU2NSIgY3k9IjUyOS44MjUxIiByPSI1MS4zMzQ4IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KC0xLjIxMTcgMC44NTM3IDAuNTc2IDAuODE3NSAtMTA0LjgwMTYgLTQxMS4wMTA5KSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgoJPHN0b3AgIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6IzI5MEU3QiIvPgoJPHN0b3AgIG9mZnNldD0iMC40MjgxIiBzdHlsZT0ic3RvcC1jb2xvcjojMzIxNDdCIi8+Cgk8c3RvcCAgb2Zmc2V0PSIwLjk5NDQiIHN0eWxlPSJzdG9wLWNvbG9yOiM0NjFGN0IiLz4KPC9yYWRpYWxHcmFkaWVudD4KPHBhdGggZGlzcGxheT0ibm9uZSIgZmlsbD0idXJsKCNTVkdJRF8yXykiIGQ9Ik0yNDUuNCwwYzAsMC03OC43LDEuNy03OSwxMi4zVjE0Yy0wLjUsMjAuNy0yMC45LDM1LjEtNDAuNSwyOC42bDAsMAoJYy0xMC0zLjMtMzksNzEtMzksNzFjLTAuMywxLTAuNCwyLjEtMC4xLDMuMUM5NS40LDE1Ni42LDI0OC40LDQsMjQ1LjQsMHoiLz4KPGNpcmNsZSBmaWxsPSIjNDYxRjdCIiBjeD0iMTQ0LjkiIGN5PSIzMC41IiByPSIxOS41Ii8+Cjwvc3ZnPgo="
+                width="80"
+                height="80"
+                alt="Solar System"
+                border="0"
+                style="height: auto; font-family: sans-serif; font-size: 15px; line-height: 15px;"
+              />
+            </td>
+          </tr>
+          <!-- Email Header : END -->
+
+          <!-- Hero Image, Flush : BEGIN -->
+          <tr>
+            <td style="background-color: #ffffff;">
+              <!-- HERO -->
+              <img
+                src="https://via.placeholder.com/1200x200"
+                width="600"
+                height=""
+                alt="alt_text"
+                border="0"
+                style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;"
+                class="g-img"
+              />
+            </td>
+          </tr>
+          <!-- Hero Image, Flush : END -->
+          <!-- 1 Column Text + Button : BEGIN -->
+          <tr>
+            <td style="background-color: #ffffff;">
+              <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+              >
+                <tr>
+                  <td
+                    style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;"
+                  >
+                    <h1
+                      style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 25px; line-height: 30px; color: #333333; font-weight: normal;"
+                    >
+                      <%=title %>
+                    </h1>
+                    <p style="margin: 30px 0;">
+                      <%-content %>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- 1 Column Text + Button : END -->
+          <tr>
+            <td style="background-color: #ffffff;">
+              <!-- HERO -->
+              <img
+                src="https://via.placeholder.com/1200x200"
+                width="600"
+                height=""
+                alt="alt_text"
+                border="0"
+                style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;"
+                class="g-img"
+              />
+            </td>
+          </tr>
+
+          <!-- Clear Spacer : BEGIN -->
+          <tr>
+            <td
+              aria-hidden="true"
+              height="40"
+              style="font-size: 0px; line-height: 0px;"
+            >
+              &nbsp;
+            </td>
+          </tr>
+          <!-- Clear Spacer : END -->
+        </table>
+
+        <!-- Email Body : END -->
+
+        <!-- Email Footer : BEGIN -->
+        <table
+          align="center"
+          role="presentation"
+          cellspacing="0"
+          cellpadding="0"
+          border="0"
+          width="100%"
+          style="margin: auto;"
+        >
+          <tr>
+            <td
+              style="padding: 20px; font-family: sans-serif; font-size: 12px; line-height: 15px; text-align: center; color: #888888;"
+            ></td>
+          </tr>
+        </table>
+
+        <!-- Email Footer : END -->
+
+        <!--[if mso]>
+            </td>
+          </tr>
+        </table>
+      <![endif]-->
+      </div>
+
+      <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+    </center>
+  </body>
+</html>

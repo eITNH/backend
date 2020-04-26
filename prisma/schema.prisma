@@ -1,0 +1,99 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://eITNH:ZYQhzOml73$7Iw$X@81.169.231.200/eITNH"
+}
+
+model Auth {
+  id                Int     @default(autoincrement()) @id
+  username          String  @unique
+  password          String
+  salt              String
+  email             String  @unique
+  activated         Boolean @default(false)
+  verificationToken String?
+  user              User?   @relation(fields: [userId], references: [id])
+  userId            Int?
+}
+
+// ============== USERS ==============
+model User {
+  id              Int      @default(autoincrement()) @id
+  firstname       String
+  lastname        String
+  image           String?
+  type            UserType @default(STUDENT)
+  studentId       String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  auth            Auth
+  courseRequests  Course[] @relation("CourseRequests", references: [id])
+  courses         Course[] @relation("Courses", references: [id])
+  favoriteCourses Course[] @relation(references: [id])
+  courseOffers    Course[] @relation("CourseOffers", references: [id])
+  files           File[]
+}
+
+enum UserType {
+  STUDENT
+  PROFESSOR
+}
+
+// ============== COURSES ==============
+model Course {
+  id              Int        @default(autoincrement()) @id
+  title           String
+  teaser          String?
+  description     String?
+  start           DateTime
+  end             DateTime
+  public          Boolean    @default(false)
+  likers          User[]     @relation(references: [id])
+  pendingMembers  User[]     @relation("CourseRequests", references: [id])
+  acceptedMembers User[]     @relation("Courses", references: [id])
+  professors      User[]     @relation("CourseOffers", references: [id])
+  files           File[]
+  categories      Category[] @relation(references: [id])
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+  studentId       Int?
+  userId          Int?
+}
+
+// ============== CATEGORY ==============
+model Category {
+  id        Int          @default(autoincrement()) @id
+  title     String
+  color     String
+  type      CategoryType
+  courses   Course[]     @relation(references: [id])
+  files     File[]       @relation(references: [id])
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+}
+
+enum CategoryType {
+  FILE
+  COURSE
+}
+
+// ============== FILES ==============
+model File {
+  id          Int        @default(autoincrement()) @id
+  title       String
+  course      Course     @relation(fields: [courseId], references: [id])
+  courseId    Int
+  type        String
+  size        Int
+  description String
+  previewPath String
+  path        String
+  creator     User       @relation(fields: [creatorId], references: [id])
+  creatorId   Int
+  categories  Category[] @relation(references: [id])
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+}
