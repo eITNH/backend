@@ -17,7 +17,7 @@
     "@prisma/client": "2.0.0-beta.3",
     "apollo-server": "2.9.14",
     "apollo-server-express": "2.9.14",
-    "aws-lambda": "0.1.2",
+    "aws-lambda": "1.0.5",
     "bcrypt": "3.0.7",
     "cors": "2.8.5",
     "date-fns": "^2.8.1",
