@@ -15,7 +15,7 @@
   "dependencies": {
     "@nexus/schema": "0.13.1",
     "@prisma/client": "2.0.0-beta.3",
-    "apollo-server": "2.9.14",
+    "apollo-server": "2.14.2",
     "apollo-server-express": "2.9.14",
     "aws-lambda": "0.1.2",
     "bcrypt": "3.0.7",
