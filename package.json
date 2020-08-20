@@ -18,7 +18,7 @@
     "apollo-server": "2.9.14",
     "apollo-server-express": "2.9.14",
     "aws-lambda": "0.1.2",
-    "bcrypt": "3.0.7",
+    "bcrypt": "5.0.0",
     "cors": "2.8.5",
     "date-fns": "^2.8.1",
     "ejs": "3.0.1",
