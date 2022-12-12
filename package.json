@@ -22,7 +22,7 @@
     "cors": "2.8.5",
     "date-fns": "^2.8.1",
     "ejs": "3.0.1",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "glob": "7.1.6",
     "graphql": "14.5.8",
     "graphql-middleware": "4.0.2",
